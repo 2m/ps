@@ -1,0 +1,18 @@
+// 1. Taisyklës:
+ZDC  // R1
+DC   // R2
+CB   // R3
+BA   // R4
+AD   // R5
+DT   // R6
+AG   // R7
+BH   // R8
+CJ   // R9
+
+// 2. Faktai:
+T
+
+// 3. Tikslas:
+Z
+
+Atbulinio iðvedimo algoritmas ras ciklà: R1, R2, R3, R4, R5, R2

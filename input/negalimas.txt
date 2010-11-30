@@ -1,0 +1,10 @@
+// 1. Taisyklës:
+ZDC  // R1
+DA   // R2
+CB   // R3
+
+// 2. Faktai:
+A
+
+// 3. Tikslas:
+Z

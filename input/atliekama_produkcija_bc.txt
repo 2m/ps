@@ -1,0 +1,14 @@
+// 1. Taisyklës:
+ZG   // R1
+GH   // R2
+ZFB  // R3
+FCD  // R4
+DA   // R5
+
+// 2. Faktai:
+ABC
+
+// 3. Tikslas:
+Z
+
+Tik atbulinio iðvedimo algoritmas ávykdis R1, R2 perteklines produkcijas.

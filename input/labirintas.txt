@@ -1,0 +1,83 @@
+// 1. Taisyklës:
+AS
+SA
+BA
+AB
+CB
+BC
+DC
+CD
+ED
+DE
+FE
+EF
+GF
+FG
+HE
+EH
+IH
+HI
+JI
+IJ
+KJ
+JK
+LK
+LK
+CL
+LC
+MK
+KM
+NM
+MN
+ON
+NO
+PO
+OP
+SP
+PS
+QS
+SQ
+RQ
+QR
+US
+SU
+VU
+UV
+WV
+VW
+XV
+VX
+YX
+XY
+TY
+YT
+@T
+ZV
+VZ
+@Z
+
+// 2. Faktai:
+S
+
+// 3. Tikslas:
+@
+
+Ðiame pavyzdyje ieðkomas iðëjimas ið labirinto.
+Taisyklës suraðytos tokia tvarka, kad naudojant
+Tiesioginio iðvedimo algoritmà, pirma bus apeitos
+abi salos ir tik tada bus nueita link iðëjimo.
+Naudojant Atbulinio iðvedimo algoritmà, bus rastas
+ilgesnins iðëjimas ið labirinto.
+
+   ++++@++++
+   +   Z   +
+   @TYXVW  +
+   +   U   +
+   + OPSQR +
+   + N A   +
+   + M B   +
+   + KLC   +
+   + J D   +
+   + IHEFG +
+   +       +
+   +++++++++

@@ -1,0 +1,12 @@
+// 1. Taisyklës:
+BA  // R1
+BZ  // R2
+
+// 2. Faktai:
+AZ
+
+// 3. Tikslas:
+Z
+
+Pavyzdys patikrina ar ieðkoma taisykliø nors reikalingas
+faktas yra pradiniuose faktuose.

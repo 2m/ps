@@ -1,0 +1,83 @@
+// 1. Taisyklës:
+US
+SU
+VU
+UV
+XV
+VX
+YX
+XY
+TY
+YT
+@T
+T@
+ZV
+VZ
+@Z
+Z@
+WV
+VW
+QS
+SQ
+RQ
+QR
+PS
+SP
+OP
+PO
+NO
+ON
+MN
+NM
+KM
+MK
+JK
+KJ
+IJ
+JI
+HI
+IH
+EH
+HE
+FE
+EF
+GF
+FG
+DE
+ED
+CD
+DC
+LC
+CL
+KL
+LK
+BC
+CB
+AB
+BA
+SA
+AS
+
+// 2. Faktai:
+S
+
+// 3. Tikslas:
+@
+
+Ðiame pavyzdyje ieðkomas iðëjimas ið labirinto.
+Taisyklës suraðytos tokia tvarka, kad naudojant
+Tiesioginio iðvedimo ar Atbulinio iðvedimo
+algoritmus, bus randamas trumpiausias kelias.
+
+   ++++@++++
+   +   Z   +
+   @TYXVW  +
+   +   U   +
+   + OPSQR +
+   + N A   +
+   + M B   +
+   + KLC   +
+   + J D   +
+   + IHEFG +
+   +       +
+   +++++++++

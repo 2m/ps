@@ -1,0 +1,17 @@
+Production systems solver using forward and backward chaining algorithms
+by Martynas Mickevièius 2010
+
+### INFO ###
+
+Netbeans project file included.
+
+Interface is in lithuanian language, but source code and comments
+are in english.
+
+This was my first attempt to use MVC when doing GUI in JAVA.
+
+### BUILDING AND RUNNING ###
+
+Build using Netbeans 6.9.1.
+
+Programs searches for input files in the ./input/ directory.
