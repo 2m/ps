@@ -31,14 +31,14 @@ public class BackwardChaining extends AbstractAlgo {
 		logger.log("Programos vykdymo sekimas:\n%s.\n", target);
 
         boolean result = get(target);
-        
+
         finished = true;
         return result;
     }
 
     public boolean get(Fact f) {
 
-		// check if fact is in primary facts
+		// check if fact is in primary facts {1}
 		if (gdb.contains(f)) {
 			logger.log(" %s yra pradinis faktas.\n", f);
             return true;
@@ -65,24 +65,24 @@ public class BackwardChaining extends AbstractAlgo {
 
         for (int i = 0; i < productions.size(); i++) {
             Production currentProduction = productions.elementAt(i);
-            if (currentProduction.getOutput().contains(f) && !usedProductions.contains(currentProduction)) {
+            if (currentProduction.getOutput().contains(f) && !usedProductions.contains(currentProduction)) { // {2}
 
 				factCanBeDerived = true;
 				boolean allInputsFound = true;
 
 				// mark the production, so it is not used from this point
-                usedProductions.add(currentProduction);
+                usedProductions.add(currentProduction); // {5}
 
 				// get all needed facts for this production.
 				// Stop after the first production which could not be found.
-                for (int j = 0; j < currentProduction.getInput().size() && allInputsFound; j++) {
+                for (int j = 0; j < currentProduction.getInput().size() && allInputsFound; j++) { // {3}
 					trace("%s. %s.", currentProduction.getInput().elementAt(j), currentProduction);
 
 					boolean result = get(currentProduction.getInput().elementAt(j));
                     allInputsFound = allInputsFound && result;
 
 					if (result) {
-						previouslyDeducted.add(currentProduction.getInput().elementAt(j));
+						previouslyDeducted.add(currentProduction.getInput().elementAt(j)); // {4}
 					}
                 }
 
@@ -101,7 +101,7 @@ public class BackwardChaining extends AbstractAlgo {
 			trace("%s nerastas. Aklavietė.\n", f);
 		}
 		rLevel--;
-		return false;
+		return false; // {6}
     }
 
 	public void trace(String s, Object... args) {
