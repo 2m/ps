@@ -34,6 +34,7 @@ public class AlgoModel extends AbstractModel {
         }
 
         updateView(true);
+        logModel.log("\nPrograma pradeda darbą.\n");
     }
 
     public void setOneIteration(Boolean b) {

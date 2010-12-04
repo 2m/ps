@@ -14,6 +14,7 @@ import java.util.Vector;
 public class BackwardChaining extends AbstractAlgo {
 
     private Vector<Fact> previouslyDeducted;
+    protected Vector<Production> productionsInUse;
 
     // recursion level - only used for logging
     private int rLevel = 0;
@@ -25,10 +26,11 @@ public class BackwardChaining extends AbstractAlgo {
         System.err.println(this);
 
         previouslyDeducted = new Vector<Fact>();
+        productionsInUse = new Vector<Production>();
     }
 
     public boolean iterate() {
-		logger.log("Programos vykdymo sekimas:\n%s.\n", target);
+		logger.log("Tikslas yra: %s.\n", target);
 
         boolean result = get(target);
 
@@ -53,7 +55,7 @@ public class BackwardChaining extends AbstractAlgo {
 		rLevel++;
 
 		// check if the fact can be derived from the used productions
-		for (Production p: usedProductions) {
+		for (Production p: productionsInUse) {
 			if (p.getOutput().contains(f)) {
 				trace("Ciklas su %s.\n", p);
 				rLevel--;
@@ -71,12 +73,12 @@ public class BackwardChaining extends AbstractAlgo {
 				boolean allInputsFound = true;
 
 				// mark the production, so it is not used from this point
-                usedProductions.add(currentProduction); // {5}
+                productionsInUse.add(currentProduction);
 
 				// get all needed facts for this production.
 				// Stop after the first production which could not be found.
                 for (int j = 0; j < currentProduction.getInput().size() && allInputsFound; j++) { // {3}
-					trace("%s. %s.", currentProduction.getInput().elementAt(j), currentProduction);
+					trace("Naujas tikslas %s, nes %s galima išvesti iš %s.", currentProduction.getInput().elementAt(j), f, currentProduction);
 
 					boolean result = get(currentProduction.getInput().elementAt(j));
                     allInputsFound = allInputsFound && result;
@@ -87,13 +89,14 @@ public class BackwardChaining extends AbstractAlgo {
                 }
 
 				if (allInputsFound) {
+                    usedProductions.add(currentProduction); // {5}
 					rLevel--;
 					return true;
 				}
 
 				// not all inputs were found for this production,
 				// unmark this production as used
-				usedProductions.remove(currentProduction);
+				productionsInUse.remove(currentProduction);
             }
         }
 
@@ -105,11 +108,11 @@ public class BackwardChaining extends AbstractAlgo {
     }
 
 	public void trace(String s, Object... args) {
-		logger.log("\n");
+        actionNum++;
+		logger.log("\n"+actionNum+". ");
 		for (int i = 0; i < rLevel; i++) {
 			logger.log("    ");
 		}
 		logger.log(String.format(s, args));
 	}
-
 }

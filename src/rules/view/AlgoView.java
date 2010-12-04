@@ -98,7 +98,7 @@ public class AlgoView extends AbstractViewPanel {
         gdb.setWrapStyleWord(true);
         jScrollPane1.setViewportView(gdb);
 
-        jLabel1.setText("Globali duomenų bazė:");
+        jLabel1.setText("Turimi faktai:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

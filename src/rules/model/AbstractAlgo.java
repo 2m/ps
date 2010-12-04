@@ -19,6 +19,7 @@ public abstract class AbstractAlgo {
     protected Vector<Production> productions;
     protected Vector<Production> usedProductions;
     protected Fact target;
+    protected int actionNum = 0;
 
     protected LogModel logger;
 
@@ -39,7 +40,7 @@ public abstract class AbstractAlgo {
         usedProductions = new Vector<Production>();
     }
 
-     public String getAnswer() {
+    public String getAnswer() {
          if (usedProductions.size() == 0) {
              return "Tuščia taisyklių seka.";
          } else {

@@ -21,7 +21,7 @@ public class ForwardChaining extends AbstractAlgo {
     }
 
     public boolean iterate() {
-
+        
         if (productionNum < productions.size()) { // {2}
 
             // check for target
@@ -49,8 +49,9 @@ public class ForwardChaining extends AbstractAlgo {
                 // mark this productions as used so it is never used again
                 usedProductions.add(currentProduction); // {9}
 
-                logger.log("Rasta tasyklė %s, gautas faktas %s.\n", currentProduction.getName(), currentProduction.getOutput());
-                logger.log("GDB: %s.\n", gdb);
+                actionNum++;
+                logger.log("%d. Rasta tasyklė %s, gautas faktas %s.\n", actionNum, currentProduction.getName(), currentProduction.getOutput());
+                logger.log("Turimi faktai: %s.\n", gdb);
                 logger.log("\n");
 
                 // start picking productions from the start
