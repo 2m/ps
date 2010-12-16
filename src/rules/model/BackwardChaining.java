@@ -57,7 +57,7 @@ public class BackwardChaining extends AbstractAlgo {
 		// check if the fact can be derived from the used productions
 		for (Production p: productionsInUse) {
 			if (p.getOutput().contains(f)) {
-				trace("Ciklas su %s.\n", p);
+				trace("Ciklas dėl %s.\n", f);
 				rLevel--;
 				return false;
 			}
